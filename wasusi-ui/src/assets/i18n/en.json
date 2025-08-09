@@ -1,0 +1,33 @@
+{
+    "welcome-back": "Welcome back",
+    "Project": "Project",
+    "Analytics": "Analytics",
+    "Text": {
+        "chooseadate":"Choose a date",
+        "nknn":"KNN index",
+        "week":"Week",
+        "config":"Configuration",
+        "knnconfiguration":"KNN configuration",
+        "controlconfig":"Control configuration",
+        "tl":"Current tank level",
+        "ps":"Initial state pumps ON/OFF",
+        "min":"Minimum water level",
+        "max":"Maximum water level",
+        "long":"Length prediction",
+        "algorithmconfig":"Configuration of the Optimum Computation Algorithm",
+        "wcm":"Tank m3 per metre height",
+        "ppc":"Pump output m3/h",
+        "constA":"Cost for going below the minimum",
+        "constB":"Cost for exceeding the maximum",
+        "constC":"Cost per change of pump status",
+        "mPer":"Permutation Matrix",
+        "mPos":"Matrix of Positions",
+        "mL":"Level Matrix",
+        "mC":"Cost Matrix",
+        "exploreGraph":"Visualisation"
+    },
+    "Errors": {
+        "ErrorCampos":"Check the fields before generating",
+        "ErrorGenerar":"Error in obtaining data"
+    }
+}

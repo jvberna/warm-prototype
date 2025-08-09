@@ -1,0 +1,242 @@
+<fuse-alert class="absolute bottom-1 right-2" [appearance]="'soft'" [dismissible]="true" [dismissed]="true"
+    [name]="'ErrorCampos'" [type]="'warn'">
+    {{'Errors.ErrorCampos' | transloco}}
+</fuse-alert>
+
+<fuse-alert class="absolute bottom-1 right-2" [appearance]="'soft'" [dismissible]="true" [dismissed]="true"
+    [name]="'ErrorGenerar'" [type]="'warn'">
+    {{'Errors.ErrorGenerar' | transloco}}
+</fuse-alert>
+
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
+
+    <!-- Main -->
+    <div class="flex-auto p-3">
+
+        <!-- CONTENT GOES HERE -->
+        <div class="h-full min-h-full max-h-full bg-card">
+
+            <!-- <div class="flex flex-col mt-3 p-8 pb-8 bg-card rounded-2xl shadow overflow-hidden"> -->
+
+                <mat-tab-group>
+
+                    <mat-tab label="{{'Text.config'|transloco}}" class="scroll-m-0">
+                        <form class="flex flex-col mt-1 p-8 pb-8 h-140 ">
+                            <p class="text-lg font-medium mb-2">{{'Text.knnconfiguration'|transloco}}</p>
+                            <div class="flex flex-row">
+                                <div>
+                                    <p-calendar class="m-1 block w-full h-12                       
+                                     rounded-md 
+                                     border-0 
+                                     shadow-sm
+                                     pt-3
+                                     pl-7
+                                     ring-1 
+                                     ring-inset
+                                     ring-gray-300
+                                     placeholder:text-gray-400
+                                     focus:ring-2 
+                                     focus:ring-inset"
+                                     [(ngModel)]="fecha" [showIcon]="true" [showTime]="true"
+                                        [showSeconds]="false" [ngModelOptions]="{standalone: true}" dateFormat="dd/mm/yy" hourFormat="hh:mm"></p-calendar>
+                                </div>
+            
+                                <div>
+                                    <mat-form-field class="m-1 ml-3 basis-1">
+                                        <mat-hint>{{'Text.nknn'|transloco}}</mat-hint>
+                                        <input [formControl]="knn" min="1" type="number" matInput
+                                            [placeholder]="('Text.nknn'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{('Text.week'|transloco)+' +'}}</mat-hint>
+                                        <input [formControl]="weekplus" min="0" type="number" matInput
+                                            [placeholder]="('Text.week'|transloco)+' +'">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{('Text.week'|transloco)+' -'}}</mat-hint>
+                                        <input [formControl]="weekminus" min="0" type="number" matInput
+                                            [placeholder]="('Text.week'|transloco)+' -'">
+                                    </mat-form-field>
+                                </div>
+            
+            
+                            </div>
+                            <p class="text-lg font-medium mt-4 mb-2">{{'Text.controlconfig'|transloco}}</p>
+                            <div class="flex flex-row">
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.tl'|transloco}}</mat-hint>
+                                        <input [formControl]="tl" min="0" type="number" step="0.5" matInput
+                                            [placeholder]="('Text.tl'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.min'|transloco}}</mat-hint>
+                                        <input [formControl]="min" min="0" type="number" step="0.5" matInput
+                                            [placeholder]="('Text.min'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.max'|transloco}}</mat-hint>
+                                        <input [formControl]="max" min="0" type="number" step="0.5" matInput
+                                            [placeholder]="('Text.max'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.long'|transloco}}</mat-hint>
+                                        <input [formControl]="long" min="1" type="number" matInput
+                                            [placeholder]="('Text.long'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-checkbox class="mt-2" [checked]="true" [color]="'primary'" [formControl]="ps">
+                                        {{'Text.ps'|transloco}}
+                                    </mat-checkbox>
+                                </div>
+                            </div>
+                            <p class="text-lg font-medium mt-8 mb-2">{{'Text.algorithmconfig'|transloco}}</p>
+                            <div class="flex flex-row">
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.wcm'|transloco}}</mat-hint>
+                                        <input [formControl]="wcm" min="0" type="number" matInput
+                                            [placeholder]="('Text.wcm'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.ppc'|transloco}}</mat-hint>
+                                        <input [formControl]="ppc" min="1" type="number" matInput
+                                            [placeholder]="('Text.ppc'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.constA'|transloco}}</mat-hint>
+                                        <input [formControl]="constA" min="0" type="number" matInput
+                                            [placeholder]="('Text.constA'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.constB'|transloco}}</mat-hint>
+                                        <input [formControl]="constB" min="0" type="number" matInput
+                                            [placeholder]="('Text.constB'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="m-1 basis-1">
+                                        <mat-hint>{{'Text.constC'|transloco}}</mat-hint>
+                                        <input [formControl]="constC" min="0" type="number" matInput
+                                            [placeholder]="('Text.constC'|transloco)">
+                                    </mat-form-field>
+                                </div>
+                                <button class="px-6 ml-3 mt-2 " mat-flat-button [color]="'primary'" (click)="generar()">
+                                    Generar
+                                </button>
+                            </div>
+                        </form>
+                        
+                    </mat-tab>
+
+                    <mat-tab label="{{'Text.mPer'|transloco}} ({{rows}})" class="scroll-m-0">
+
+                        <table mat-table [dataSource]="mPer">
+
+                            <ng-container *ngFor="let itemcol of mPerColumns; let colIndex = index"
+                                matColumnDef="{{itemcol}}" class="">
+                                <th mat-header-cell *matHeaderCellDef > {{itemcol}} </th>
+                                <td mat-cell *matCellDef="let element; let colIndex = index" > {{element[itemcol]}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="mPerColumns"></tr>
+                            <tr mat-row [ngClass]="op.index == rowIndex ? 'bg-green-500':''" *matRowDef="let row; columns: mPerColumns; let rowIndex = index" (click)="selectRow(rowIndex)"></tr>
+                        </table>
+                    </mat-tab>
+
+                    <mat-tab label="{{'Text.mPos'|transloco}} ({{rows}})">
+                        <table mat-table [dataSource]="mPos">
+
+                            <ng-container *ngFor="let itemcol of mPosColumns; let colIndex = index"
+                                matColumnDef="{{itemcol}}">
+                                <th mat-header-cell *matHeaderCellDef> {{itemcol}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element[itemcol]}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="mPosColumns"></tr>
+                            <tr mat-row [ngClass]="op.index == rowIndex ? 'bg-green-500':''" *matRowDef="let row; columns: mPosColumns;let rowIndex = index" (click)="selectRow(rowIndex)"></tr>
+                        </table>
+                    </mat-tab>
+
+                    <mat-tab label="{{'Text.mL'|transloco}} ({{rows}})">
+                        <table mat-table [dataSource]="mL" class="scroll-auto">
+
+                            <ng-container *ngFor="let itemcol of mLColumns; let colIndex = index"
+                                matColumnDef="{{itemcol}}">
+                                <th mat-header-cell *matHeaderCellDef> {{itemcol}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element[itemcol]}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="mLColumns"></tr>
+                            <tr mat-row [ngClass]="op.index == rowIndex ? 'bg-green-500':''" *matRowDef="let row; columns: mLColumns;let rowIndex = index" (click)="selectRow(rowIndex)"></tr>
+                        </table>
+                    </mat-tab>
+
+                    <mat-tab label="{{'Text.mC'|transloco}} ({{rows}})">
+                        <table mat-table [dataSource]="mC">
+
+                            <ng-container *ngFor="let itemcol of mCColumns; let colIndex = index"
+                                matColumnDef="{{itemcol}}">
+                                <th mat-header-cell *matHeaderCellDef> {{itemcol}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element[itemcol]}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="mCColumns"></tr>
+                            <tr mat-row [ngClass]="op.index == rowIndex ? 'bg-green-500':''" *matRowDef="let row; columns: mCColumns;let rowIndex = index" (click)="selectRow(rowIndex)"></tr>
+                        </table>
+                    </mat-tab> 
+
+                    <mat-tab label="{{'Text.exploreGraph'|transloco}}">
+                        <div class="flex flex-col flex-auto h-180 shadow">
+                            <apx-chart
+                            [series]="chartOptions.series"
+                            [chart]="chartOptions.chart"
+                            [xaxis]="chartOptions.xaxis"
+                            [stroke]="chartOptions.stroke"
+                            [tooltip]="chartOptions.tooltip"
+                            [dataLabels]="chartOptions.dataLabels"
+                            [legend]="chartOptions.legend"
+                            [markers]="chartOptions.markers"
+                            [grid]="chartOptions.grid"
+                            [yaxis]="chartOptions.yaxis"
+                            [title]="chartOptions.title"
+                          ></apx-chart>
+                          <button class="px-6 ml-3 mt-2 w-30 " mat-flat-button [color]="'primary'" (click)="loadGraphData()">
+                            Draw
+                        </button>
+
+
+
+                        </div>
+                    
+                    
+                    </mat-tab>
+
+
+
+                </mat-tab-group>
+            <!-- </div> -->
+
+        </div>
+
+    </div>
+
+</div>
+

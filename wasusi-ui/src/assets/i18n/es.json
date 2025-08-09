@@ -1,0 +1,33 @@
+{
+    "welcome-back": "Bienvenido",
+    "Project": "Proyectos",
+    "Analytics": "Analiticas",
+    "Text": {
+        "chooseadate":"Elija una fecha",
+        "nknn":"Índice KNN",
+        "week":"Semana",
+        "config":"Configuración",
+        "knnconfiguration":"Configuraión de KNN",
+        "controlconfig":"Configuración de Control",
+        "tl":"Nivel actual del tanque",
+        "ps":"Estado inicial bombas ON/OFF",
+        "min":"Nivel mínimo de agua",
+        "max":"Nivel máximo de agua",
+        "long":"Longitud predicción",
+        "algorithmconfig":"Configuración del Algoritmo de cáculo de óptimos",
+        "wcm":"Depósito m3 por metro altura",
+        "ppc":"Bomba produccion m3/h",
+        "constA":"Coste por bajar del mínimo",
+        "constB":"Coste por pasar del máximo",
+        "constC":"Coste por cambio estado bomba",
+        "mPer":"Matriz de Permutaciones",
+        "mPos":"Matriz de Posiciones",
+        "mL":"Matriz de Nivel",
+        "mC":"Matriz de Costes",
+        "exploreGraph":"Visualización"
+    },
+    "Errors": {
+        "ErrorCampos":"Revise los campos antes de generar",
+        "ErrorGenerar":"Error al obtener datos"
+    }
+}
